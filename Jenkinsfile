@@ -240,7 +240,7 @@ pipeline {
             agent { label 'PROD' }
             steps { 
                 sh "mvn versions:set -DnewVersion=Prod-${BUILD_NUMBER}"
-                sh "mvn package deploy"
+                // sh "mvn package deploy"
             }
         }
         stage('PROD docker build') {
